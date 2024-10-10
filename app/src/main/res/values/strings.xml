@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyApiStructure</string>
+    <string name="wrong">Some thing went to wrong</string>
+    <string name="unauthorized">Unauthorized</string>
+    <string name="bad_request">Bad Request</string>
+    <string name="forbidden">Forbidden</string>
+    <string name="not_found">Not Found</string>
+    <string name="method_not_allowed">Method Not Allowed</string>
+    <string name="conflict">Conflict</string>
+    <string name="unprocessable_entity">Unprocessable Entity</string>
+    <string name="internal_server_error">Internal Server Error</string>
+    <string name="bad_gateway">Bad Gateway</string>
+    <string name="service_unavailable">Service Unavailable</string>
+    <string name="gateway_timeout">Gateway Timeout</string>
+    <string name="unknown">Unknown</string>
+
+
+    <string name="please_enter_password">Please enter password</string>
+    <string name="invalid_number">Invalid mobile number</string>
+    <string name="please_enter_number">Please enter number</string>
+</resources>

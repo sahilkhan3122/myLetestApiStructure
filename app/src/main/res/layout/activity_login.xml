@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.app.myapistructure.ui.login.LoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.app.myapistructure.ui.login.LoginActivity">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="false"
+            android:layout_marginHorizontal="@dimen/dimens20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="enter Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                
+                android:maxLength="10"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:text="@={viewModel.number}"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilpassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilNumber">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="enterPassword"
+                android:imeOptions="actionDone"
+                android:maxLines="@integer/password_max_length"
+                android:padding="@dimen/dimens16dp"
+                android:singleLine="true"
+                android:text="@={viewModel.passsword}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/dimens16sp"
+                app:hintEnabled="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvForgetPass"
+            android:layout_width="@dimen/dimens0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens24dp"
+            android:text="forgotPassword"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimens14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tilpassword"
+            app:layout_constraintStart_toStartOf="@+id/tilpassword"
+            app:layout_constraintTop_toBottomOf="@+id/tilpassword" />
+        
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="@dimen/dimens0dp"
+            android:layout_height="@dimen/dimens60dp"
+            android:layout_marginHorizontal="@dimen/dimens24dp"
+            android:layout_marginTop="@dimen/margin_padding_20dp"
+            android:layout_marginBottom="@dimen/dimens20dp"
+            android:backgroundTint="@color/black"
+            android:onClick="@{() -> viewModel.login()}"
+            android:textSize="@dimen/dimens16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgetPass"
+            app:layout_constraintVertical_bias="1.0"
+           android:text="login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
