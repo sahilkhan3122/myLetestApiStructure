@@ -49,8 +49,6 @@ class LoginViewModel @Inject constructor(val context: Context) : BaseViewModel()
                 loginMutableStateFlow.value = ResponseData.Success()
                 callLoginApi()
             }
-
-
         }
     }
 
@@ -71,5 +69,4 @@ class LoginViewModel @Inject constructor(val context: Context) : BaseViewModel()
             }
         }
     }
-
 }

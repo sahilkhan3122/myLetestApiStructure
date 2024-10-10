@@ -38,6 +38,24 @@ android {
         dataBinding = true
         buildConfig = true
     }
+
+    /*    flavorDimensions += "MyRickshawSP"
+    productFlavors {
+        create("development") {
+            dimension = "MyRickshawSP"
+            buildConfigField("String", "BASE_URL", "\"http://192.168.5.208/\"")
+            buildConfigField("String", "BASE_API_URL", "\"http://192.168.5.208:8000/api/\"")
+            buildConfigField("String", "BASE_SOCKET_URL", "\"http://192.168.5.208:3000\"")
+            buildConfigField("String", "MAP_KEY", "\"AIzaSyC-SFqp8tjooejbFiIa-hwq2Gl-og7ZeSQ\"")
+        }
+        create("production") {
+            dimension = "MyRickshawSP"
+            buildConfigField("String", "BASE_URL", "\"http://18.118.183.99/\"")
+            buildConfigField("String", "BASE_API_URL", "\"http://18.118.183.99/api/\"")
+            buildConfigField("String", "BASE_SOCKET_URL", "\"http://18.118.183.99:8080\"")
+            buildConfigField("String", "MAP_KEY", "\"AIzaSyC-SFqp8tjooejbFiIa-hwq2Gl-og7ZeSQ\"")
+        }
+    }*/
     kotlinOptions {
         jvmTarget = "1.8"
     }

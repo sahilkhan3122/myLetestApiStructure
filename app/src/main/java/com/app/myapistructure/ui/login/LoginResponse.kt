@@ -47,7 +47,6 @@ data class LoginResponse(
         @field:SerializedName("email")
         val email: String = "",
     )
-
 }
 
 

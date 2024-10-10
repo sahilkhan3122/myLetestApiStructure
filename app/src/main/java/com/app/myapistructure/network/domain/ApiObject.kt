@@ -3,7 +3,6 @@ package com.app.myapistructure.network.domain
 class ApiObject {
 
     object ApiHeaderKey {
-
         const val X_API_KEY = "x-api-key"
     }
 
@@ -13,8 +12,6 @@ class ApiObject {
 
     object ApiEndPoint {
         const val LOGIN = "login"
-
-
     }
 
     object Param {
@@ -26,5 +23,4 @@ class ApiObject {
         const val DEVICE_TYPE = "device_type"
 
     }
-
 }

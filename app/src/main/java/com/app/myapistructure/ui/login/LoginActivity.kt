@@ -38,13 +38,14 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                 when (it) {
                     is ResponseData.Empty -> {}
                     is ResponseData.Error -> {
-                        Toast.makeText(this@LoginActivity, "${it.error}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@LoginActivity, it.error, Toast.LENGTH_SHORT).show()
                     }
 
                     is ResponseData.InternetConnection -> {
                     }
 
                     is ResponseData.Loading -> {
+
                     }
 
                     is ResponseData.Success -> {
@@ -52,20 +53,19 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                             if (it.data.status) {
                                 Toast.makeText(
                                     this@LoginActivity,
-                                    "${it.data.message}",
+                                    it.data.message,
                                     Toast.LENGTH_SHORT
                                 ).show()
                             } else {
                                 Toast.makeText(
                                     this@LoginActivity,
-                                    "${it.data.message}",
+                                    it.data.message,
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }
                         }
 
                     }
-
                     is ResponseData.Exception -> {}
                 }
 

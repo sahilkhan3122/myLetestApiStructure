@@ -66,16 +66,4 @@ abstract class BaseActivity<T : ViewDataBinding> : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-/*
-    fun generateImageUrl(): Pair<Uri, String> {
-        @SuppressLint("SimpleDateFormat") val sdf = SimpleDateFormat("yyyy-MM-dd_HH:mm:ss:SSS")
-        val cal: Calendar = Calendar.getInstance()
-        val s: String = sdf.format(cal.time)
-        val string = "${filesDir}/Image-$s.jpg"
-        return Pair(
-            FileProvider.getUriForFile(
-                this, BuildConfig.APPLICATION_ID + ".fileprovider", File(string)
-            ), string
-        )
-    }*/
 }

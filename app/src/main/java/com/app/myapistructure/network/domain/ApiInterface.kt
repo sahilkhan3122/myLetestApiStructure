@@ -8,10 +8,7 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 interface ApiInterface {
-
     @FormUrlEncoded
     @POST(LOGIN)
     suspend fun login(@FieldMap hashMap: HashMap<String, String>): Response<LoginResponse>
-
-
 }

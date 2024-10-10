@@ -6,15 +6,12 @@ import com.app.myapistructure.network.domain.ApiInterface
 import com.app.myapistructure.network.domain.ApiObject.ApiHeaderKey.X_API_KEY
 import com.app.myapistructure.network.domain.ApiObject.ApiHeaderValue.X_API_KEY_VALUE
 import com.app.myapistructure.network.utility.CheckValidation
-import com.example.myapistructure.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import retrofit2.Retrofit
@@ -74,13 +71,6 @@ object AppModule {
     fun provideSocket(): Socket {
         return IO.socket(BuildConfig.BASE_SOCKET_URL)
     }
-
-    @Provides
-    @Singleton
-    fun checkValidation(context: Context): CheckValidation {
-        return CheckValidation(context)
-    }
-
 
     @Provides
     @Singleton

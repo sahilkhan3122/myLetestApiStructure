@@ -6,7 +6,6 @@ import javax.inject.Inject
 
 
 open class CheckValidation @Inject constructor(val context: Context) {
-
     fun loginValidation(mobileNumber: String, password: String): Result<Any, Any> {
         return if (mobileNumber.isEmpty()) {
             Result.Error(
@@ -39,5 +38,4 @@ open class CheckValidation @Inject constructor(val context: Context) {
             else -> context.getString(R.string.unknown)
         }
     }
-
 }
